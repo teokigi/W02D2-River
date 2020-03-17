@@ -1,8 +1,8 @@
 class Fish
+    attr_reader :name
     #fish have names
-attr_reader :name
-    def initialize(fishy_name)
-        @name = fishy_name
+    def initialize(fish)
+        @name = fish
     end
 
 end
