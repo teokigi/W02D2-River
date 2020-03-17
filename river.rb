@@ -5,13 +5,20 @@ class River
 #has a fish_count method
 attr_reader :name, :fishes
 
-    def initialize(river_name)
+    def initialize(river_name,fishes)
         @name = river_name
-        @fishes= []
+        @fishes= fishes
     end
 
     def total_fishes
         return @fishes.count
     end
-    
+
+    def remove_fish(fish)
+        @fishes.delete(fish)
+    end
+
+    def add_fish(fish)
+        @fishes.push(fish)
+    end
 end
