@@ -3,11 +3,15 @@ class River
 #holds an array of fish
 #loses fish when bears eat it
 #has a fish_count method
-attr_reader :name, :home_to
+attr_reader :name, :fishes
 
     def initialize(river_name)
         @name = river_name
-        @home_to = []
+        @fishes= []
     end
 
+    def total_fishes
+        return @fishes.count
+    end
+    
 end
