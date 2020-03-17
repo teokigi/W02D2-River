@@ -7,3 +7,9 @@ require_relative('../fish')
 require_relative('../bears')
 
 class RiverTest < MiniTest::Test
+
+    def setup
+
+    end
+
+end
