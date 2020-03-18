@@ -9,7 +9,7 @@ class FishTest < MiniTest::Test
 
 #find fish by name
     def test_001_fish_has_name
-                @fish1 = Fish.new("tuna")
+        @fish1 = Fish.new("tuna")
         assert_equal("tuna", @fish1.name)
     end
 
