@@ -12,7 +12,10 @@ class BearsTest < MiniTest::Test
 
     def setup
         @bear1 = Bears.new("Yogi", :Grizzley, ["tuna","mackarel"])
-        @fish = Fish.new("salmon")
+        @fish1 = Fish.new("salmon")
+        @fish2 = Fish.new("haddock")
+        @fish3 = Fish.new("tuna")
+        @fishes = [@fish1,@fish2,@fish3]
     end
 
     def test_001_bear_name
@@ -28,8 +31,12 @@ class BearsTest < MiniTest::Test
     end
 
     def test_004_eat_fish
-        @bear1.eat_fish(@fish)
+        @river = River.new("Amazon",@fishes)
+        @bear1.eat_fish(@fish1)
+        @river.remove_fish(@fish1)
+
         assert_equal(3,@bear1.food_count)
+        assert_equal(2,@river.total_fishes)
     end
 
     def test_005_bear_talk_for_grizzley

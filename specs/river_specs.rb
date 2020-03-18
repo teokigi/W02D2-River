@@ -17,7 +17,6 @@ class RiverTest < MiniTest::Test
 
         @the_clyde = River.new("the Clyde",@fishes)
 
-        @bear1 = Bears.new("Freddy",:Brown,[@Fish1,@fish2])
     end
 
     #fish count
@@ -33,7 +32,6 @@ class RiverTest < MiniTest::Test
     #remove fish, add to bear belly
     def test_003_bear_comes_to_eat_fish
         @the_clyde.remove_fish(@fish1)
-        @bear1.eat_fish(@fish1)
         assert_equal(2,@the_clyde.total_fishes)
     end
 
